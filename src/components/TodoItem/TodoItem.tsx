@@ -12,7 +12,7 @@ type Props = {
   deletingTodoIds: number[];
 };
 
-export const Todoitem: React.FC<Props> = ({
+export const TodoItem: React.FC<Props> = ({
   onDeleteTodo,
   todo,
   deletingTodoIds,

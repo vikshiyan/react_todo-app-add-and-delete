@@ -18,7 +18,7 @@ export const Footer: React.FC<Props> = ({
   handleDeleteTodo,
 }) => {
   const filtersOptionName = Object.values(SelectedType);
-  const notCompleteedCount = todos.filter(todo => !todo.completed).length;
+  const notCompletedCount = todos.filter(todo => !todo.completed).length;
   const completedTodos = todos.filter(todo => todo.completed);
 
   const deleteCompletedTodos = () => {
@@ -29,7 +29,7 @@ export const Footer: React.FC<Props> = ({
     <>
       <footer className="todoapp__footer" data-cy="Footer">
         <span className="todo-count" data-cy="TodosCounter">
-          {notCompleteedCount} items left
+          {notCompletedCount} items left
         </span>
 
         <nav className="filter" data-cy="Filter">

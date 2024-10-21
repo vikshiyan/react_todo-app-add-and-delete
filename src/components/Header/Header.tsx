@@ -35,17 +35,15 @@ export const Header: React.FC<Props> = ({
       return;
     }
 
-    const newTemptTodo: Todo = {
-      id: 0,
+    const newTodo = {
       userId: USER_ID,
       title: newTitle.trim(),
       completed: false,
     };
 
-    const newTodo = {
-      userId: USER_ID,
-      title: newTitle.trim(),
-      completed: false,
+    const newTemptTodo: Todo = {
+      id: 0,
+      ...newTodo,
     };
 
     setTempTodo(newTemptTodo);
